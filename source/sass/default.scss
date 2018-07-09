@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @include reset-mp;
+  @include set-font($size: 16px);
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1680px;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    overflow-x: hidden;
+  }
+}
+
+.main-title {
+  @include heading;
+}
+
+.site-list {
+  @include flex-column;
+  @include list-reset;
+}

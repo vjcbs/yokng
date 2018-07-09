@@ -1,0 +1,9 @@
+.header {
+  @include flex-row;
+  justify-content: center;
+}
+
+.title {
+  font-size: 80px;
+  color: #4b7223;
+}

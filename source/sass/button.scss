@@ -1,0 +1,17 @@
+.button {
+  width: 200px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgray;
+    color: white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
