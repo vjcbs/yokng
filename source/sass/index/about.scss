@@ -1,0 +1,26 @@
+.about {
+  padding: 20px 30px;
+
+  .about__wrapper {
+
+  }
+
+  .about__img-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    @include border;
+  }
+
+  .about__img {
+    max-width: 100%;
+  }
+
+  .about__desc {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+  }
+}

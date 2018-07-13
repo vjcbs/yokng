@@ -1,0 +1,12 @@
+.pagination {
+
+  .pagination__list {
+    @include reset-list;
+    @include flex-row;
+    justify-content: center;
+  }
+
+  .pagination__item {
+    margin: 5px;
+  }
+}

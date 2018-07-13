@@ -1,0 +1,28 @@
+.contact {
+  padding: 20px 30px;
+
+  .contact__header {
+    @include center;
+  }
+
+  .contact__form {
+    @include flex-row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact__input {
+    margin-bottom: 10px;
+    flex-basis: 100%;
+  }
+
+  .contact__textarea {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  .contact__info {
+    @include flex-column;
+  }
+}

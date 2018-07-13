@@ -10,25 +10,13 @@ html {
 
 body {
   @include reset-mp;
-  @include set-font($size: 16px);
+  @include font($size: 16px);
 }
 
-.wrapper {
-  position: relative;
-  max-width: 1680px;
-  margin: 0 auto;
-  overflow-x: hidden;
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    overflow-x: hidden;
-  }
-}
-
-.main-title {
-  @include heading;
-}
-
-.site-list {
-  @include flex-column;
-  @include list-reset;
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
 }

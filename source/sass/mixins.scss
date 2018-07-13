@@ -9,26 +9,14 @@
   padding: 0;
 }
 
-@mixin set-font($size: 16px, $color: black, $lh: 24px) {
-  font-family: $regular-font, "Helvetica", "Arial", sans-serif;
+@mixin font($size: 16px, $color: black, $lh: 24px) {
+  font-family: $default-font, "Helvetica", "Arial", sans-serif;
   font-size: $size;
   color: $color;
   line-height: $lh;
 }
 
-@mixin set-font-bold($size: 17px, $color: black, $lh: 24px) {
-  font-family: $bold-font, "Helvetica", "Arial", sans-serif;
-  font-size: $size;
-  color: $color;
-  line-height: $lh;
-}
-
-@mixin heading($size: 25px, $lh: 30px) {
-  @include set-font-bold($size: $size, $lh: $lh);
-  @include reset-mp;
-}
-
-@mixin list-reset {
+@mixin reset-list {
   @include reset-mp;
   list-style: none;
 }
@@ -49,27 +37,25 @@
   position: $pos;
 }
 
-@mixin customize-legend($margin: -5%, $padding: 10%, $color: lightgreen) {
-  color: $color;
-  padding-right: $padding;
-  margin: $margin;
-}
-
-@mixin remove-fieldset-borders($color: lightgreen) {
-  border: none;
-  border-top: 1px solid $color;
-}
-
 @mixin reset-link {
   color: black;
   text-decoration: none;
 }
 
-@mixin fill-and-align($color: lightgreen, $align: center) {
-  fill: $color;
-  align-self: $align;
-}
-
 @mixin border($color: black) {
   border: 1px solid $color;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

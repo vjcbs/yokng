@@ -1,0 +1,17 @@
+.order {
+  padding: 20px 30px;
+
+  .order__header {
+    @include flex-column;
+    align-items: center;
+  }
+
+  .order__text {
+    text-align: center;
+  }
+
+  .order__wrapper {
+    width: 100%;
+    @include border;
+  }
+}

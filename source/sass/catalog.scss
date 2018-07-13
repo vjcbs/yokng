@@ -1,0 +1,19 @@
+.catalog {
+
+  .catalog__header {
+    @include center;
+  }
+
+  .catalog__title {
+    // @include border;
+  }
+
+  .catalog__wrapper {
+    @include flex-column;
+    align-items: center;
+  }
+
+  .catalog__list {
+    @include reset-list;
+  }
+}

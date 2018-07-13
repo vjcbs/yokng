@@ -1,0 +1,16 @@
+.programme {
+  @include flex-column;
+  align-items: center;
+  @include border(blue);
+}
+
+.programme__wrapper {
+  width: 100%;
+}
+
+.programme__list {
+  @include reset-list;
+  @include flex-column;
+  align-items: center;
+  @include border(red);
+}

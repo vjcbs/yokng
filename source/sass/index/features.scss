@@ -1,0 +1,36 @@
+.features {
+  padding: 20px 30px;
+  background-color: $bg-color;
+
+  .features__header {
+    position: relative;
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features__info-link {
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 0;
+  }
+
+  .features__search {
+    width: 100%;
+    @include flex-column;
+    align-items: center;
+  }
+
+  .features__search-field {
+
+  }
+
+  .features__filter {
+
+  }
+
+  .features__list {
+    @include reset-list;
+  }
+}

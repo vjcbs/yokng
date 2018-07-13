@@ -1,9 +1,21 @@
 .header {
-  @include flex-row;
-  justify-content: center;
-}
+  padding: 20px 30px;
 
-.title {
-  font-size: 80px;
-  color: #4b7223;
+  .header__nav {
+    margin-bottom: 40px;
+  }
+
+  .header__nav-list {
+    display: none;
+  }
+
+  .header__jumbo {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__text {
+    text-align: center;
+  }
 }

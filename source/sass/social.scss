@@ -1,0 +1,9 @@
+.social__list {
+  @include reset-list;
+  @include flex-row;
+  justify-content: center;
+}
+
+.social__item {
+  margin: 10px;
+}
