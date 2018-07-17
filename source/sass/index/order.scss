@@ -15,3 +15,15 @@
     @include border;
   }
 }
+
+@media (min-width: 768px) {
+  .order {
+    padding: 50px;
+
+    .order__wrapper {
+      @include flex-row;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
+}

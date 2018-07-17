@@ -33,4 +33,121 @@
   .features__list {
     @include reset-list;
   }
+
+  .features__img-wrapper {
+    @include center;
+  }
+
+  .features__img {
+    max-width: 100%;
+  }
+
+  .features__desc-icon-wrapper {
+    @include visually-hidden;
+  }
+
+  .features__item {
+    &:last-child {
+      @include visually-hidden;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    padding: 50px;
+
+    .features__wrapper {
+      padding: 0 50px;
+      margin-bottom: 30px;
+    }
+
+    .features__header {
+      justify-content: space-between;
+    }
+
+    .features__info-link {
+      position: static;
+    }
+
+    .features__text {
+      width: 66.666%;
+    }
+
+    .features__search {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .features__desc-icon-wrapper {
+      @include visually-hidden--undo;
+    }
+
+    .features__gallery {
+
+      @include flex-column;
+      justify-content: center;
+      align-items: center;
+      // @include border;
+    }
+
+    .features__list {
+      @include flex-row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 992px;
+      margin: 0 auto 30px;
+    }
+
+    .features__desc {
+      @include flex-row;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+    }
+
+    .features__item {
+      position: relative;
+      // @include border(red);
+
+      &:first-child {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+
+        .features__desc {
+          left: auto;
+          right: 0;
+          width: 40%;
+        }
+      }
+
+      &:nth-child(2) {
+        flex-basis: 56.8%;
+        // @include border(blue);
+      }
+
+      &:last-child {
+        @include visually-hidden--undo;
+        flex-basis: 40%;
+        // @include border(gold);
+
+        .features__img {
+          max-width: auto;
+          width: 100%;
+          // height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .features {
+
+  }
 }

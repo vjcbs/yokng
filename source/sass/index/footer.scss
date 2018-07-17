@@ -16,3 +16,25 @@
     text-align: center;
   }
 }
+
+@media (min-width: 768px) {
+  .footer {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    height: 150px;
+    background-color: #2f2933;
+
+    .footer__list {
+
+    }
+
+    .footer__copyright {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

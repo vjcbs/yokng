@@ -25,4 +25,71 @@
   .contact__info {
     @include flex-column;
   }
+
+  .contact__footer {
+    @include border;
+  }
+
+  .contact__footer-text-wrapper  {
+    // margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact__footer-input-wrapper {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 50px;
+
+    .contact__header {
+
+    }
+
+    .contact__body {
+      @include flex-row;
+      justify-content: space-between;
+    }
+
+    .contact__form {
+      flex-basis: 45%;
+      justify-content: space-between;
+    }
+
+    .contact__info {
+      flex-basis: 45%;
+    }
+
+    .contact__input {
+      margin-bottom: 20px;
+    }
+
+    .contact__submit {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    .contact__input {
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex-basis: 45%;
+      }
+    }
+
+    .contact__footer {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 50px;
+    }
+
+    .contact__footer-text-wrapper {
+      text-align: left;
+    }
+  }
 }

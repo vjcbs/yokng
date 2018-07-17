@@ -2,15 +2,32 @@
   @include flex-column;
   align-items: center;
   @include border(blue);
+
+  .programme__wrapper {
+    width: 100%;
+  }
+
+  .programme__list {
+    @include reset-list;
+    @include flex-column;
+    align-items: center;
+    @include border(red);
+
+    &:nth-of-type(2) {
+      @include visually-hidden;
+    }
+  }
 }
 
-.programme__wrapper {
-  width: 100%;
-}
+@media (min-width: 768px) {
+  .programme {
+    flex-basis: 50%;
 
-.programme__list {
-  @include reset-list;
-  @include flex-column;
-  align-items: center;
-  @include border(red);
+    .programme__list {
+
+      &:nth-of-type(2) {
+        @include visually-hidden--undo;
+      }
+    }
+  }
 }

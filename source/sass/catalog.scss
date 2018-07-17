@@ -17,3 +17,9 @@
     @include reset-list;
   }
 }
+
+@media (min-width: 768px) {
+  .catalog {
+    flex-basis: 50%;
+  }
+}

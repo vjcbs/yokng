@@ -54,6 +54,15 @@
   margin: -1px; padding: 0; border: 0;
 }
 
+@mixin visually-hidden--undo {
+  position: static;
+  overflow: auto;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
 @mixin center {
   display: flex;
   justify-content: center;

@@ -6,7 +6,7 @@
 
   <title>YokNGalam</title>
 
-  <script src="js/picturefill.min.js"></script>
+  <!-- <script src="js/picturefill.min.js"></script> -->
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,6 +30,9 @@
           Contact
         </li>
       </ul>
+      <div class="header__menu-toggle">
+
+      </div>
     </nav>
 
     <div class="header__jumbo">
@@ -46,6 +49,7 @@
 
     <div class="header__background header__background--second">
     </div>
+
     <div class="header__background header__background--third">
     </div>
   </header>
@@ -53,12 +57,12 @@
   <section class="about">
     <div class="about__wrapper">
       <div class="about__img-wrapper">
-        <img class="about__img" src="http://via.placeholder.com/260x150"/>
+        <img class="about__img" src="img/ic-house.png"/>
       </div>
       <div class="about__desc">
         <h2 class="about__title">City of Love</h2>
         <p class="about__text">
-          Malang is the second lasrgest city in East Java province, Indonesia. It has a history
+          Malang is the second largest city in East Java province, Indonesia. It has a history
           dating back to the ancient Mataram Kingdom. The city is famous for its cool
           temperture. People in East Java sometimes call it "Paris of East Java".
         </p>
@@ -86,61 +90,59 @@
           <a class="features__filter-link">Recommended place</a>
         </div>
       </div>
-      <div class="features__gallery">
-        <ul class="features__list">
-          <li class="features__item">
-            <img class="features__img" src="http://via.placeholder.com/260x150"/>
-            <div class="features__desc">
-              <div class="features__desc-icon-wrapper visually-hidden">
-                <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
-              </div>
-              <h3 class="features__desc-title">Batu</h3>
-              <p class="features__desc-text">
-                is a city located in East Java Province of Indonesia. It is situated
-                about 20 km to the northwest of Malang. Formerly, it was a part of Malang
-                Regency; but in 2001, Batu became an independent city.
-                A population of 190,000 people, it lies on the southern slopes of Gunung
-                Welirang. Its population largely consists of Javanese.
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <img class="features__img" src="http://via.placeholder.com/260x150"/>
-            <div class="features__desc">
-              <div class="features__desc-icon-wrapper visually-hidden">
-                <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
-              </div>
-              <h3 class="features__desc-title">Bromo</h3>
-              <p class="features__desc-text">
-                Mount Bromo is an active volcano and part of the Tengger massive
-                in East Java, Indonesia. At 2,329 metres (7,641 ft) it is not only
-                the highest peak of the massive, but the most well-known.
-              </p>
-            </div>
-          </li>
-          <li class="features__item visually-hidden">
-            <img class="features__img" src="http://via.placeholder.com/260x150"/>
-            <div class="features__desc visually-hidden">
-              <div class="features__desc-icon-wrapper visually-hidden">
-                <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
-              </div>
-              <h3 class="features__desc-title">Batu</h3>
-              <p class="features__desc-text">
+    </div>
+    <div class="features__gallery">
+      <ul class="features__list">
+        <li class="features__item">
+          <div class="features__img-wrapper">
+            <img class="features__img" src="img/img-batu.jpg"/>
+          </div>
 
-              </p>
+          <div class="features__desc">
+            <div class="features__desc-icon-wrapper">
+              <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
             </div>
-          </li>
+            <h3 class="features__desc-title">Batu</h3>
+            <p class="features__desc-text">
+              is a city located in East Java Province of Indonesia. It is situated
+              about 20 km to the northwest of Malang. Formerly, it was a part of Malang
+              Regency; but in 2001, Batu became an independent city.
+              A population of 190,000 people, it lies on the southern slopes of Gunung
+              Welirang. Its population largely consists of Javanese.
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__img-wrapper">
+            <img class="features__img" src="img/img-bromo.jpg"/>
+          </div>
+          <div class="features__desc">
+            <div class="features__desc-icon-wrapper">
+              <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
+            </div>
+            <h3 class="features__desc-title">Bromo</h3>
+            <p class="features__desc-text">
+              Mount Bromo is an active volcano and part of the Tengger massive
+              in East Java, Indonesia. At 2,329 metres (7,641 ft) it is not only
+              the highest peak of the massive, but the most well-known.
+            </p>
+          </div>
+        </li>
+        <li class="features__item visually-hidden">
+          <div class="features__img-wrapper">
+            <img class="features__img" src="img/img-biru.jpg"/>
+          </div>
+        </li>
+      </ul>
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item"><</li>
+          <li class="pagination__item">1</li>
+          <li class="pagination__item">2</li>
+          <li class="pagination__item">3</li>
+          <li class="pagination__item">></li>
+          <li class="pagination__item">>></li>
         </ul>
-        <div class="pagination">
-          <ul class="pagination__list">
-            <li class="pagination__item"><</li>
-            <li class="pagination__item">1</li>
-            <li class="pagination__item">2</li>
-            <li class="pagination__item">3</li>
-            <li class="pagination__item">></li>
-            <li class="pagination__item"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -181,9 +183,10 @@
             <span class="programme__date-span">Day 2</span>
             <span class="programme__date-chooser">05/29/2015</span>
           </div>
-          <ul class="programme__list visually-hidden">
+          <ul class="programme__list">
             <li class="programme__item">
-
+              <h4 class="programme__item-title">Mt. Bromo</h4>
+              <span class="programme__item-time">03.30 - 09.00</span>
             </li>
             <li class="programme__item">
 
@@ -254,10 +257,10 @@
       </div>
     </div>
     <footer class="contact__footer">
-      <div class="contact__footer-wrapper">
+      <div class="contact__footer-text-wrapper">
         <h2 class="contact__footer-title">Keep in touch</h2>
         <p class="contact__footer-text">
-
+          We Will Give you latest information about Malang
         </p>
       </div>
       <div class="contact__footer-input-wrapper">
@@ -294,5 +297,12 @@
       <span class="footer__copyright-text">2018</span>
     </div>
   </footer>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
