@@ -1,29 +1,69 @@
 .order {
   padding: 20px 30px;
+}
 
-  .order__header {
-    @include flex-column;
-    align-items: center;
-  }
+.order__header {
+  @include flex-column;
+  align-items: center;
+}
 
-  .order__text {
-    text-align: center;
-  }
+.order__title {
+  // font-family: "Chunkfive", sans-serif;
+  // font-size: $h2-sz * 0.5;
+  // letter-spacing: 1px;
+  // color: $light-green;
+  @include title;
+}
 
+.order__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: $text-color;
+  text-align: center;
+}
+
+.order__wrapper {
+  width: 100%;
+  @include flex-column;
+  // @include border;
+}
+
+@media (min-width: 640px) {
   .order__wrapper {
-    width: 100%;
-    @include border;
+    @include flex-row;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) {
   .order {
     padding: 50px;
+  }
 
-    .order__wrapper {
-      @include flex-row;
-      max-width: 1024px;
-      margin: 0 auto;
-    }
+  .order__title {
+    font-size: $h2-sz * 0.75;
+    line-height: 45px;
+  }
+
+  .order__text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .order {
+    padding: 50px 130px;
+  }
+
+  .order__title {
+    font-size: $h2-sz;
+    line-height: 50px;
+  }
+
+  .order__text {
+    font-size: 18px;
   }
 }

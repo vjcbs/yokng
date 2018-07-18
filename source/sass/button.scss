@@ -1,17 +1,11 @@
 .button {
-  width: 200px;
-  height: 50px;
-  background-color: #ffffff;
-  border: 2px solid black;
+  width: 230px;
+  height: 75px;
+  font-family: $button-font, sans-serif;
+  background-color: #c3f37f;
+  color: #ffffff;
+  border: none;
+  border-radius: 45px;
   text-transform: uppercase;
   cursor: pointer;
-
-  &:hover {
-    background-color: lightgray;
-    color: white;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
 }

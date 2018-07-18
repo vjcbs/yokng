@@ -1,70 +1,187 @@
 .header {
   position: relative;
   padding: 20px 30px;
-  max-height: 640px;
+  // max-height: 640px;
   background: url("../img/img-header-bg.jpg") no-repeat;
   background-size: auto;
-  background-position: top -220px center;
+  background-position: top -150px center;
+}
 
-  .header__menu-toggle {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    width: 20px;
-    height: 20px;
-    background: url("../img/icon-menu-open.svg") no-repeat;
+.header__brand {
+  @include reset-link;
+  font-family: $brand-font, sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+
+  b {
+    font-family: $brand-bfont, sans-serif;
+  }
+}
+
+.header__menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+}
+
+.header__nav {
+  margin-bottom: 50px;
+}
+
+.header__nav-list {
+  @include visually-hidden;
+  @include reset-list;
+}
+
+.header__nav-link {
+  @include reset-link;
+  font-family: $menu-font, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.header__jumbo {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+}
+
+.header__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Chunkfive", sans-serif;
+  font-size: $h1-sz * 0.36;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header__text {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.header__button {
+  @include center;
+  @include reset-link;
+  color: #10273d;
+  background-color: #ffffa6;
+  outline: none;
+
+  &:hover {
+    background-color: rgba(195, 243, 127, 0.6);
+    color: rgba(255, 255, 255, 0.6);
   }
 
+  &:active {
+    background-color: rgba(195, 243, 127, 0.6);
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: 576px) {
   .header__nav {
-    margin-bottom: 40px;
-  }
-
-  .header__nav-list {
-    @include visually-hidden;
-    @include reset-list;
-  }
-
-  .header__jumbo {
-    @include flex-column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 180px;
+    margin-bottom: 75px;
   }
 
   .header__title {
-    text-transform: uppercase;
-  }
-
-  .header__text {
-    text-align: center;
+    font-size: $h1-sz * 0.5;
   }
 }
 
 @media (min-width: 768px) {
   .header {
-    padding: 50px;
+    padding: 30px 50px;
     background-position: top -150px center;
+  }
 
-    .header__menu-toggle {
-      display: none;
+  .header__brand {
+    font-size: 26px;
+  }
+
+  .header__menu-toggle {
+    display: none;
+  }
+
+  .header__nav {
+    @include flex-row;
+    // @include border(gold);
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 60px;
+  }
+
+  .header__nav-list {
+    @include visually-hidden--undo;
+    @include flex-row;
+    // @include border(tomato);
+  }
+
+  .header__nav-item {
+    margin: 10px 0;
+    @include border(transparent);
+  }
+
+  .header__nav-link {
+    padding: 10px 18px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: border-color 300ms, opacity 100ms;
+
+    &:hover {
+      border-color: #ffffff;
     }
 
-    .header__nav {
-      @include flex-row;
-      @include border(gold);
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 60px;
+    &:active {
+      opacity: 0.6;
     }
+  }
 
-    .header__nav-list {
-      @include visually-hidden--undo;
-      @include flex-row;
-      @include border(tomato);
-    }
+  .header__title {
+    font-size: $h1-sz * 0.75;
+  }
+}
 
-    .header__nav-item {
-      margin: 10px 20px;
-    }
+@media (min-width: 1150px) {
+  .header {
+    padding: 50px 130px;
+    background-position: top -50px center;
+  }
+
+  .header__brand {
+    font-size: 29px;
+  }
+
+  .header__nav {
+    margin-bottom: 100px;
+  }
+
+  .header__nav-link {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .header__jumbo {
+    margin-bottom: 220px;
+  }
+
+  .header__title {
+    font-size: $h1-sz;
+    margin-bottom: 50px;
+  }
+
+  .header__text {
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 40px;
   }
 }

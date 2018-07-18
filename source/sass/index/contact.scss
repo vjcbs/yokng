@@ -1,95 +1,167 @@
 .contact {
   padding: 20px 30px;
 
-  .contact__header {
-    @include center;
-  }
+  background: linear-gradient(rgba(1, 162, 166, 0.8), rgba(1, 162, 166, 0.8)), url("../img/img-contact-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-color: rgba(1, 162, 166, 0.5);
+}
 
-  .contact__form {
-    @include flex-row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.contact__header {
+  @include center;
+}
 
-  .contact__input {
-    margin-bottom: 10px;
-    flex-basis: 100%;
-  }
+.contact__title {
+  @include title;
+  color: #ffffff;
+}
 
-  .contact__textarea {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-    resize: none;
-  }
+.contact__body {
+  // padding: 50px 0;
+}
 
-  .contact__info {
-    @include flex-column;
-  }
+.contact__form {
+  @include flex-row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
-  .contact__footer {
-    @include border;
-  }
+.contact__input {
+  margin-bottom: 10px;
+  flex-basis: 100%;
+  height: 40px;
+  padding: 8px;
+  @include border(#c7c7c7);
+  border-radius: 5px;
 
-  .contact__footer-text-wrapper  {
-    // margin: 0 auto;
-    text-align: center;
+  &::placeholder {
+    font-style: italic;
+    color: #b9b9b9;
   }
+}
 
-  .contact__footer-input-wrapper {
-    text-align: center;
+.contact__textarea {
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  resize: none;
+  font-family: "Lato Regular";
+
+  &::placeholder {
+    font-style: italic;
+    color: #b9b9b9;
   }
+}
+
+.contact__submit {
+  width: 160px;
+  height: 65px;
+}
+
+.contact__info {
+  @include flex-column;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact__info-title {
+  @include reset-mp;
+  margin-bottom: 10px;
+  font-family: "Lato Light", sans-serif;
+  font-size: 24px;
+}
+
+.contact__info-span {
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
   .contact {
     padding: 50px;
+  }
 
-    .contact__header {
+  .contact__title {
+    position: relative;
+    margin-bottom: 65px;
+    font-size: $h2-sz * 0.75;
+    line-height: 45px;
 
+    &::after {
+      position: absolute;
+      content: "OR";
+      display: block;
+      font-family: "Montserrat Regular";
+      font-size: 16px;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
 
-    .contact__body {
-      @include flex-row;
-      justify-content: space-between;
-    }
+  .contact__body {
+    @include flex-row;
+    justify-content: space-between;
+  }
 
-    .contact__form {
-      flex-basis: 45%;
-      justify-content: space-between;
-    }
+  .contact__form {
+    flex-basis: 45%;
+    justify-content: space-between;
+  }
 
-    .contact__info {
-      flex-basis: 45%;
-    }
+  .contact__info {
+    flex-basis: 45%;
+    text-align: left;
+  }
 
-    .contact__input {
-      margin-bottom: 20px;
-    }
+  .contact__info-title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 32px;
+  }
 
-    .contact__submit {
-      margin-left: auto;
-    }
+  .contact__info-span {
+    font-size: 14px;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    margin-bottom: 20px;
+  }
+
+  .contact__submit {
+    margin-left: auto;
   }
 }
 
 @media (min-width: 992px) {
   .contact {
-    .contact__input {
-      &:nth-child(2),
-      &:nth-child(3) {
-        flex-basis: 45%;
-      }
-    }
 
-    .contact__footer {
-      @include flex-row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 30px 50px;
-    }
+  }
 
-    .contact__footer-text-wrapper {
-      text-align: left;
+  .contact__input {
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex-basis: 48%;
     }
+  }
+}
+
+@media (min-width: 1150px) {
+  .contact {
+    padding: 50px 130px;
+  }
+
+  .contact__title {
+    margin-bottom: 75px;
+    font-size: $h2-sz;
+    line-height: 50px;
+  }
+
+  .contact__info-title {
+    margin-bottom: 25px;
+    font-size: 32px;
+    line-height: 36px;
   }
 }

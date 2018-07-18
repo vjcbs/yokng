@@ -2,8 +2,42 @@
   @include reset-list;
   @include flex-row;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .social__item {
-  margin: 10px;
+  margin: 0 10px;
+}
+
+.social__link {
+  @include reset-link;
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  // background-color: white;
+  background: url("../img/sprite-social.png") no-repeat;
+}
+
+.social__icon--fb {
+  background-position: 0 0;
+}
+
+.social__icon--tw {
+  background-position: -42px 0;
+}
+
+.social__icon--ig {
+  background-position: -82px 0;
 }

@@ -13,21 +13,21 @@
 <body>
   <header class="header">
     <nav class="header__nav">
-      <div class="header__brand">
-        YokNgalam
-      </div>
+      <a class="header__brand" href="/">
+        Yok<b>Ngalam</b>
+      </a>
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          About
+          <a class="header__nav-link" href="#">About</a>
         </li>
         <li class="header__nav-item">
-          Destination
+          <a class="header__nav-link" href="#">Destination</a>
         </li>
         <li class="header__nav-item">
-          Itinerary
+          <a class="header__nav-link" href="#">Itinerary</a>
         </li>
         <li class="header__nav-item">
-          Contact
+          <a class="header__nav-link" href="#">Contact</a>
         </li>
       </ul>
       <div class="header__menu-toggle">
@@ -36,12 +36,12 @@
     </nav>
 
     <div class="header__jumbo">
-      <h1 class="header__title">Lets get lost</h1>
+      <h1 class="header__title">Lets get <span class="dark-turquoise">lost</span></h1>
       <p class="header__text">
         Malang will never dissapoint you.<br>
         From every step you took you will be amazed and suddenly fallin love with Malang.
       </p>
-      <a class="header__button">Set itinerary now</a>
+      <a class="button header__button" href="#makeOrder">Set itinerary now</a>
     </div>
 
     <div class="header__background header__background--first">
@@ -60,7 +60,7 @@
         <img class="about__img" src="img/ic-house.png"/>
       </div>
       <div class="about__desc">
-        <h2 class="about__title">City of Love</h2>
+        <h2 class="about__title">City of <span class="dark-turquoise">Love</span></h2>
         <p class="about__text">
           Malang is the second largest city in East Java province, Indonesia. It has a history
           dating back to the ancient Mataram Kingdom. The city is famous for its cool
@@ -73,8 +73,12 @@
   <section class="features">
     <div class="features__wrapper">
       <header class="features__header">
-        <h2 class="features__title">Destination</h2>
-        <a class="features__info-link">see basic regulation</a>
+        <h2 class="features__title">Des<span class="dark-turquoise">tination</span></h2>
+        <div class="features__info">
+          <span class="features__info-icon"></span>
+          <a class="features__info-link">see basic regulation</a>
+        </div>
+
       </header>
       <p class="features__text">
         Being around by many mountain, Malang not only came with mountain vacation,
@@ -82,11 +86,10 @@
       </p>
       <div class="features__search">
         <div class="features__search-field">
-          <label class="features__search-label" for="search">GO</label>
-          <input class="features__search-input" id="search" type="search" />
+          <input class="features__search-input" id="search" type="search" placeholder="search destination"/>
         </div>
         <div class="features__filter">
-          <a class="features__filter-link">All place</a>
+          <a class="features__filter-link features__filter-link--active">All place </a>/
           <a class="features__filter-link">Recommended place</a>
         </div>
       </div>
@@ -100,7 +103,7 @@
 
           <div class="features__desc">
             <div class="features__desc-icon-wrapper">
-              <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
+              <img class="features__desc-icon" src="img/ic-city.png" width="57" height="59"/>
             </div>
             <h3 class="features__desc-title">Batu</h3>
             <p class="features__desc-text">
@@ -118,7 +121,7 @@
           </div>
           <div class="features__desc">
             <div class="features__desc-icon-wrapper">
-              <img class="features__desc-icon" src="http://via.placeholder.com/50x50"/>
+              <img class="features__desc-icon" src="img/ic-mountain.png" width="54" height="26"/>
             </div>
             <h3 class="features__desc-title">Bromo</h3>
             <p class="features__desc-text">
@@ -149,13 +152,13 @@
 
   <section class="order">
     <header class="order__header">
-      <h2 class="order__title">Set Itinerary</h2>
+      <h2 class="order__title">Set <span class="dark-turquoise">Itinerary</span></h2>
       <p class="order__text">
         Simply drag and drop what you want to visit, and voila we make a itinerary and schedule for your vacation.
         Have a great trip!
       </p>
     </header>
-    <div class="order__wrapper">
+    <div class="order__wrapper" id="makeOrder">
       <section class="programme">
         <header class="programme__header">
           <h3 class="programme__title">Your itinerary title here</h3>
@@ -167,16 +170,14 @@
           </div>
           <ul class="programme__list">
             <li class="programme__item">
+              <img class="programme__item-icon" src="img/ic-mountain.png" data-type="mountain"/>
               <h4 class="programme__item-title">Mt. Bromo</h4>
               <span class="programme__item-time">03.30 - 09.00</span>
             </li>
             <li class="programme__item">
-              <h4 class="programme__item-title">Mt. Bromo</h4>
-              <span class="programme__item-time">03.30 - 09.00</span>
-            </li>
-            <li class="programme__item">
-              <h4 class="programme__item-title">Mt. Bromo</h4>
-              <span class="programme__item-time">03.30 - 09.00</span>
+              <img class="programme__item-icon" src="img/ic-city.png" data-type="city"/>
+              <h4 class="programme__item-title">Batu City</h4>
+              <span class="programme__item-time">09.30 - 13.00</span>
             </li>
           </ul>
           <div class="programme__date">
@@ -188,17 +189,11 @@
               <h4 class="programme__item-title">Mt. Bromo</h4>
               <span class="programme__item-time">03.30 - 09.00</span>
             </li>
-            <li class="programme__item">
-
-            </li>
-            <li class="programme__item">
-
-            </li>
           </ul>
         </div>
         <div class="programme__buttons">
-          <button class="programme__button">save as pdf</button>
-          <button class="programme__button">print</button>
+          <button class="button programme__button">save as pdf</button>
+          <button class="button programme__button">print</button>
         </div>
       </section>
       <section class="catalog">
@@ -207,29 +202,40 @@
         </header>
         <div class="catalog__wrapper">
           <div class="catalog__filter">
-            <span class="catalog__filter-span">sort by</span>
-            <span class="catalog__filter-chooser">Mountain</span>
+            <span class="catalog__filter-span">filter:</span>
+            <!-- <span class="catalog__filter-chooser">Mountain</span> -->
+            <select class="catalog__filter-select" name="place">
+              <option value="none" selected>
+                none
+              </option>
+              <option value="mountain">
+                Mountain
+              </option>
+              <option value="city">
+                City
+              </option>
+            </select>
           </div>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <h4 class="catalog__item-title">Mt. Bromo</h4>
-              <span class="catalog__time">estimated time: 5 hours</span>
-              <div class="catalog__icon-wrapper">
-                <img class="catalog__icon" src="http://via.placeholder.com/50x50" />
-                <a class="catalog__details">View details</a>
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Mt. Bromo</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">5 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon" src="img/ic-mountain.png" data-type="mountain"/>
+                <a class="catalog__details" href="#">view details</a>
               </div>
             </li>
             <li class="catalog__item">
-
-            </li>
-            <li class="catalog__item">
-
-            </li>
-            <li class="catalog__item">
-
-            </li>
-            <li class="catalog__item">
-
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Batu City</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">3 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon" src="img/ic-city.png" data-type="city"/>
+                <a class="catalog__details" href="#">view details</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -243,11 +249,11 @@
     </header>
     <div class="contact__body">
       <form class="contact__form" action="http://echo.htmlacademy.ru">
-        <input class="contact__input" />
-        <input class="contact__input" />
-        <input class="contact__input" />
-        <textarea class="contact__textarea"></textarea>
-        <input class="contact__submit" type="submit" />
+        <input class="contact__input" placeholder="Your Name"/>
+        <input class="contact__input" placeholder="Your Email"/>
+        <input class="contact__input" placeholder="Subject"/>
+        <textarea class="contact__textarea" rows="5" placeholder="Type your message here..."></textarea>
+        <input class="button contact__submit" type="submit" value="Send message"/>
       </form>
       <div class="contact__info">
         <h3 class="contact__info-title">You can find us here</h3>
@@ -256,18 +262,19 @@
         <span class="contact__info-span">(+62) 8816721612</span>
       </div>
     </div>
-    <footer class="contact__footer">
-      <div class="contact__footer-text-wrapper">
-        <h2 class="contact__footer-title">Keep in touch</h2>
-        <p class="contact__footer-text">
-          We Will Give you latest information about Malang
-        </p>
-      </div>
-      <div class="contact__footer-input-wrapper">
-        <input class="contact__footer-input" type="email"/>
-        <span class="contact__footer-submit">Submit</span>
-      </div>
-    </footer>
+  </section>
+
+  <section class="subscribe">
+    <div class="subscribe__text-wrapper">
+      <h2 class="subscribe__title">Keep in touch</h2>
+      <p class="subscribe__text">
+        We will give you latest information about Malang
+      </p>
+    </div>
+    <div class="subscribe__input-wrapper">
+      <input class="subscribe__input" type="email" placeholder="Type Email Here For Subscribe"/>
+      <span class="subscribe__submit"></span>
+    </div>
   </section>
 
   <footer class="footer">
@@ -284,17 +291,17 @@
     </ul>
     <ul class="social__list">
       <li class="social__item">
-        FB
+        <a class="social__link" href="#"><span class="social__icon social__icon--fb"></span></a>
       </li>
       <li class="social__item">
-        TW
+        <a class="social__link" href="#"><span class="social__icon social__icon--tw"></span></a>
       </li>
       <li class="social__item">
-        IG
+        <a class="social__link" href="#"><span class="social__icon social__icon--ig"></span></a>
       </li>
     </ul>
     <div class="footer__copyright">
-      <span class="footer__copyright-text">2018</span>
+      <span class="footer__copyright-text">©YokNMalang, 2018</span>
     </div>
   </footer>
 

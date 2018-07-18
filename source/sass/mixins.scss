@@ -9,8 +9,8 @@
   padding: 0;
 }
 
-@mixin font($size: 16px, $color: black, $lh: 24px) {
-  font-family: $default-font, "Helvetica", "Arial", sans-serif;
+@mixin font($name: $default-font, $size: 16px, $color: black, $lh: 24px) {
+  font-family: $name, "Helvetica", "Arial", sans-serif;
   font-size: $size;
   color: $color;
   line-height: $lh;
@@ -38,6 +38,7 @@
 }
 
 @mixin reset-link {
+  @include reset-mp;
   color: black;
   text-decoration: none;
 }
@@ -67,4 +68,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin title {
+  font-family: "Chunkfive", sans-serif;
+  font-size: $h2-sz * 0.5;
+  letter-spacing: 1px;
+  color: $turquoise;
+  text-transform: capitalize;
 }

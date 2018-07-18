@@ -1,53 +1,91 @@
 .about {
   position: relative;
   padding: 20px 30px;
+}
 
-  .about__wrapper {
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 10;
-  }
+.about__wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
 
-  .about__img-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+.about__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
-  .about__img {
-    max-width: 100%;
-    object-fit: contain;
-  }
+.about__img {
+  max-width: 100%;
+  object-fit: contain;
+}
 
-  .about__desc {
-    @include flex-column;
-    justify-content: center;
-    align-items: center;
-  }
+.about__desc {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title {
+  // font-family: "Chunkfive", sans-serif;
+  // font-size: $h2-sz * 0.5;
+  // letter-spacing: 1px;
+  // color: $light-green;
+  @include title;
+}
+
+.about__text {
+  font-size: 14px;
+  color: $text-color;
 }
 
 @media (min-width: 768px) {
   .about {
     padding: 0 50px 50px 50px;
+  }
 
-    .about__wrapper {
-      @include flex-row;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      margin-top: -50px;
-      padding-top: 100px;
-      // @include border;
-    }
+  .about__wrapper {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: -50px;
+    padding-top: 100px;
+    // @include border;
+  }
 
-    .about__img-wrapper {
-      flex-basis: 45%;
-    }
+  .about__img-wrapper {
+    flex-basis: 48%;
+  }
 
-    .about__desc {
-      justify-content: center;
-      align-items: flex-start;
-      flex-basis: 45%;
-      padding: 0 20px;
-      // @include border(gold);
-    }
+  .about__desc {
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 48%;
+    padding: 0 20px;
+    // @include border(gold);
+  }
+
+  .about__title {
+    font-size: $h2-sz * 0.75;
+    line-height: 45px;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .about {
+    padding: 0 130px 50px 130px;
+  }
+
+  .about__title {
+    font-size: $h2-sz;
+    line-height: 50px;
+  }
+
+  .about__text {
+    font-size: 18px;
   }
 }

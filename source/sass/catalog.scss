@@ -1,25 +1,128 @@
 .catalog {
+  order: 1;
+}
 
-  .catalog__header {
-    @include center;
-  }
+.catalog__header {
+  @include center;
+  padding: 10px;
+}
 
-  .catalog__title {
-    // @include border;
-  }
+.catalog__title {
+  // @include border;
+  margin: 0;
+  padding: 0;
+  // padding: 10px 0;
+  font-family: "Lato Black", sans-serif;
+  font-size: 17px;
+  color: $turquoise;
+  text-transform: capitalize;
+}
 
-  .catalog__wrapper {
-    @include flex-column;
-    align-items: center;
-  }
+.catalog__wrapper {
+  @include flex-column;
+  align-items: center;
+}
 
-  .catalog__list {
-    @include reset-list;
+.catalog__filter-span {
+  font-family: "Lato Heavy";
+  color: $turquoise;
+}
+
+.catalog__filter-select {
+  color: #bcbcbc;
+  border-color: #acacac;
+  outline: none;
+}
+
+.catalog__list {
+  @include reset-list;
+  width: 100%;
+}
+
+.catalog__item {
+  @include border(#e8e8e8);
+  @include font($name: "Lato Light");
+  @include flex-row;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px 0;
+  height: 70px;
+  box-shadow: 0 0 4px 0 #acacac;
+}
+
+.catalog__item-title-wrapper {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.catalog__item-title {
+  @include reset-mp;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.catalog__time {
+  font-size: 12px;
+}
+
+.catalog__details-wrapper {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+  // height: 100%;
+  // @include border;
+}
+
+.catalog__icon {
+  width: 53px;
+  height: 26px;
+  margin-top: 3px;
+}
+
+.catalog__details {
+  @include reset-link;
+  font-family: "Lato Semibold", sans-serif;
+  font-size: 12px;
+  color: $turquoise;
+}
+
+@media (min-width: 640px) {
+  .catalog {
+    flex-basis: 49%;
+    order: 2;
   }
 }
 
 @media (min-width: 768px) {
-  .catalog {
-    flex-basis: 50%;
+  .catalog__header {
+    padding: 15px;
+  }
+
+  .catalog__title {
+    font-size: 19px;
+  }
+
+  .catalog__filter {
+    align-self: flex-start;
+    // @include border;
+  }
+
+  .catalog__item-title {
+    font-size: 17px;
+  }
+
+  .catalog__time {
+    font-size: 14px;
+  }
+
+  .catalog__details {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .catalog__header {
+    padding: 20px;
   }
 }
