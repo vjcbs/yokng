@@ -18,16 +18,16 @@
       </a>
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">About</a>
+          <a class="header__nav-link" href="#about">About</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Destination</a>
+          <a class="header__nav-link" href="#features">Destination</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Itinerary</a>
+          <a class="header__nav-link" href="#order">Itinerary</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Contact</a>
+          <a class="header__nav-link" href="#contact">Contact</a>
         </li>
       </ul>
       <div class="header__menu-toggle">
@@ -54,7 +54,7 @@
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__wrapper">
       <div class="about__img-wrapper">
         <img class="about__img" src="img/ic-house.png"/>
@@ -70,14 +70,14 @@
     </div>
   </section>
 
-  <section class="features">
+  <section class="features" id="features">
     <div class="features__wrapper">
       <header class="features__header">
         <h2 class="features__title">Des<span class="dark-turquoise">tination</span></h2>
-        <div class="features__info">
+        <!-- <div class="features__info">
           <span class="features__info-icon"></span>
           <a class="features__info-link">see basic regulation</a>
-        </div>
+        </div> -->
 
       </header>
       <p class="features__text">
@@ -114,6 +114,8 @@
               Welirang. Its population largely consists of Javanese.
             </p>
           </div>
+
+
         </li>
         <li class="features__item">
           <div class="features__img-wrapper">
@@ -150,7 +152,7 @@
     </div>
   </section>
 
-  <section class="order">
+  <section class="order" id="order">
     <header class="order__header">
       <h2 class="order__title">Set <span class="dark-turquoise">Itinerary</span></h2>
       <p class="order__text">
@@ -169,15 +171,18 @@
             <span class="programme__date-chooser">05/29/2015</span>
           </div>
           <ul class="programme__list">
-            <li class="programme__item">
-              <img class="programme__item-icon" src="img/ic-mountain.png" data-type="mountain"/>
+            <!-- <li class="programme__item">
+              <img class="programme__item-icon programme__item-icon--mountain" src="img/ic-mountain.png"/>
               <h4 class="programme__item-title">Mt. Bromo</h4>
               <span class="programme__item-time">03.30 - 09.00</span>
             </li>
-            <li class="programme__item">
-              <img class="programme__item-icon" src="img/ic-city.png" data-type="city"/>
+            <li class="programme__item" data-placetype="city">
+              <img class="programme__item-icon programme__item-icon--city" src="img/ic-city.png"/>
               <h4 class="programme__item-title">Batu City</h4>
               <span class="programme__item-time">09.30 - 13.00</span>
+            </li> -->
+            <li class="programme__item programme__item--empty">
+              <span class="programme__item-empty-span">Drag destination here</span>
             </li>
           </ul>
           <div class="programme__date">
@@ -185,10 +190,17 @@
             <span class="programme__date-chooser">05/29/2015</span>
           </div>
           <ul class="programme__list">
-            <li class="programme__item">
+            <li class="programme__item programme__item--empty">
+              <span class="programme__item-empty-span">Drag destination here</span>
+            </li>
+            <!-- <li class="programme__item">
               <h4 class="programme__item-title">Mt. Bromo</h4>
               <span class="programme__item-time">03.30 - 09.00</span>
             </li>
+            <li class="programme__item">
+              <h4 class="programme__item-title">Mt. Bromo</h4>
+              <span class="programme__item-time">03.30 - 09.00</span>
+            </li> -->
           </ul>
         </div>
         <div class="programme__buttons">
@@ -203,7 +215,6 @@
         <div class="catalog__wrapper">
           <div class="catalog__filter">
             <span class="catalog__filter-span">filter:</span>
-            <!-- <span class="catalog__filter-chooser">Mountain</span> -->
             <select class="catalog__filter-select" name="place">
               <option value="none" selected>
                 none
@@ -217,33 +228,46 @@
             </select>
           </div>
           <ul class="catalog__list">
-            <li class="catalog__item">
+            <li class="catalog__item" data-placetype="mountain">
               <div class="catalog__item-title-wrapper">
                 <h4 class="catalog__item-title">Mt. Bromo</h4>
                 <span class="catalog__time">estimated time: <span class="dark-turquoise">5 hours</span></span>
               </div>
               <div class="catalog__details-wrapper">
-                <img class="catalog__icon" src="img/ic-mountain.png" data-type="mountain"/>
+                <img class="catalog__icon catalog__icon--mountain" src="img/ic-mountain.png" data-type="mountain"/>
                 <a class="catalog__details" href="#">view details</a>
               </div>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-placetype="city">
               <div class="catalog__item-title-wrapper">
                 <h4 class="catalog__item-title">Batu City</h4>
                 <span class="catalog__time">estimated time: <span class="dark-turquoise">3 hours</span></span>
               </div>
               <div class="catalog__details-wrapper">
-                <img class="catalog__icon" src="img/ic-city.png" data-type="city"/>
+                <img class="catalog__icon catalog__icon--city" src="img/ic-city.png" data-type="city"/>
                 <a class="catalog__details" href="#">view details</a>
               </div>
             </li>
+            <li class="catalog__item" data-placetype="city">
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Biru City</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">4 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon catalog__icon--city" src="img/ic-city.png" data-type="city"/>
+                <a class="catalog__details" href="#">view details</a>
+              </div>
+            </li>
+            <!-- <li class="catalog__item catalog__item--empty">
+              <span class="catalog__item-empty-span">Drag destination back</span>
+            </li> -->
           </ul>
         </div>
       </section>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <header class="contact__header">
       <h2 class="contact__title">Contact</h2>
     </header>
@@ -310,6 +334,15 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
+  <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/drag-n-drop.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 </html>

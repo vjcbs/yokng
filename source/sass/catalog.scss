@@ -5,6 +5,8 @@
 .catalog__header {
   @include center;
   padding: 10px;
+  margin-bottom: 10px;
+  // @include border;
 }
 
 .catalog__title {
@@ -50,6 +52,17 @@
   box-shadow: 0 0 4px 0 #acacac;
 }
 
+.catalog__item--empty {
+  @include center;
+  border: 1px dashed #3ddbc7;
+  box-shadow: none;
+}
+
+.catalog__item-empty-span {
+  font-family: "Lato Heavy";
+  color: #3ddbc7;
+}
+
 .catalog__item-title-wrapper {
   @include flex-column;
   justify-content: space-between;
@@ -78,6 +91,11 @@
   width: 53px;
   height: 26px;
   margin-top: 3px;
+}
+
+.catalog__icon--city {
+  width: 34px;
+  height: 33px;
 }
 
 .catalog__details {

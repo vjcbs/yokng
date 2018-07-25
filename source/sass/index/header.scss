@@ -1,9 +1,11 @@
 .header {
   position: relative;
   padding: 20px 30px;
-  // max-height: 640px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   background: url("../img/img-header-bg.jpg") no-repeat;
-  background-size: auto;
+  // background-size: cover;
   background-position: top -150px center;
 }
 
@@ -74,15 +76,15 @@
   color: #10273d;
   background-color: #ffffa6;
   outline: none;
+  transition-duration: 300ms;
 
   &:hover {
-    background-color: rgba(195, 243, 127, 0.6);
-    color: rgba(255, 255, 255, 0.6);
+    background-color: #f7f78b;
+    // color: rgba(255, 255, 255, 0.6);
   }
 
   &:active {
-    background-color: rgba(195, 243, 127, 0.6);
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(16, 39, 61, 0.6);
   }
 }
 
@@ -154,7 +156,7 @@
 @media (min-width: 1150px) {
   .header {
     padding: 50px 130px;
-    background-position: top -50px center;
+    background-position: top -30px center;
   }
 
   .header__brand {

@@ -1,5 +1,7 @@
 .footer {
   padding: 20px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #2f2933;
   background-image: url("../img/img-footer-bg.png");
   background-repeat: no-repeat;
@@ -11,6 +13,7 @@
     @include flex-row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
     // @include border;
   }
 

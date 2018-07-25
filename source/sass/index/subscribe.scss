@@ -1,5 +1,7 @@
 .subscribe {
   padding: 20px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
   @include border(transparent);
   background: linear-gradient(70deg, #bdf271 50%, #bdf271 50%, #b1e568 50%, #b1e568);
 }

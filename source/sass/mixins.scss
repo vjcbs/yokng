@@ -57,7 +57,7 @@
 
 @mixin visually-hidden--undo {
   position: static;
-  overflow: auto;
+  overflow: visible;
   clip: auto;
   width: auto;
   height: auto;

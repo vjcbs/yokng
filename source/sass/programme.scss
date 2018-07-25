@@ -47,12 +47,10 @@
 .programme__list {
   @include reset-list;
   @include flex-column;
-
   align-items: stretch;
-  // @include border(red);
 
   &:nth-of-type(2) {
-    @include visually-hidden;
+    // @include visually-hidden;
   }
 }
 
@@ -71,10 +69,27 @@
   box-shadow: 0 0 4px 0 #acacac;
 }
 
+.programme__item--empty {
+  @include center;
+  background-color: #fbf6a3;
+  border: 1px dashed #e8e897;
+  box-shadow: none;
+}
+
+.programme__item-empty-span {
+  font-family: "Lato Heavy";
+  color: #d8cb7d;
+}
+
 .programme__item-icon {
   width: 43px;
   height: 21px;
   transform: translateY(3px);
+}
+
+.programme__item-icon--city {
+  width: 34px;
+  height: 33px;
 }
 
 .programme__item-title {
@@ -105,9 +120,6 @@
 
   .programme__list {
 
-    &:nth-of-type(2) {
-      @include visually-hidden--undo;
-    }
   }
 }
 
@@ -156,6 +168,16 @@
 
   .programme__date {
     font-size: 16px;
+  }
+
+  .programme__list {
+    // margin-bottom: 20px;
+    // @include border(red);
+
+    &:nth-of-type(2) {
+      // @include border(blue);
+      margin-bottom: 10px;
+    }
   }
 
   .programme__item {
