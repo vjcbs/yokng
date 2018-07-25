@@ -29,13 +29,30 @@
   background: url("../img/icon-menu-open.svg") no-repeat;
 }
 
+.header__menu-toggle--closed {
+  background: url("../img/icon-menu-close.svg") no-repeat;
+}
+
 .header__nav {
   margin-bottom: 50px;
 }
 
 .header__nav-list {
-  @include visually-hidden;
   @include reset-list;
+  display: none;
+}
+
+.header__nav-list--nojs {
+  display: block;
+}
+
+.header__nav-list--slide-down {
+  display: block;
+}
+
+.header__nav-item {
+  margin: 10px;
+  text-align: center;
 }
 
 .header__nav-link {

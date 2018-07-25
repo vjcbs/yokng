@@ -16,7 +16,7 @@
       <a class="header__brand" href="/">
         Yok<b>Ngalam</b>
       </a>
-      <ul class="header__nav-list">
+      <ul class="header__nav-list header__nav-list--nojs">
         <li class="header__nav-item">
           <a class="header__nav-link" href="#about">About</a>
         </li>
@@ -30,9 +30,7 @@
           <a class="header__nav-link" href="#contact">Contact</a>
         </li>
       </ul>
-      <div class="header__menu-toggle">
-
-      </div>
+      <div class="header__menu-toggle"></div>
     </nav>
 
     <div class="header__jumbo">
@@ -133,20 +131,22 @@
             </p>
           </div>
         </li>
-        <li class="features__item visually-hidden">
+        <li class="features__item">
           <div class="features__img-wrapper">
+            <img class="features__img-icon" src="img/ic-biru.png" />
             <img class="features__img" src="img/img-biru.jpg"/>
           </div>
         </li>
       </ul>
       <div class="pagination">
         <ul class="pagination__list">
-          <li class="pagination__item"><</li>
+          <li class="pagination__item"></li>
           <li class="pagination__item">1</li>
           <li class="pagination__item">2</li>
           <li class="pagination__item">3</li>
-          <li class="pagination__item">></li>
-          <li class="pagination__item">>></li>
+          <li class="pagination__item">4</li>
+          <li class="pagination__item">5</li>
+          <li class="pagination__item"></li>
         </ul>
       </div>
     </div>
@@ -168,7 +168,7 @@
         <div class="programme__wrapper">
           <div class="programme__date">
             <span class="programme__date-span">Day 1</span>
-            <span class="programme__date-chooser">05/29/2015</span>
+            <span class="programme__date-chooser">07/20/2018</span>
           </div>
           <ul class="programme__list">
             <!-- <li class="programme__item">
@@ -187,7 +187,7 @@
           </ul>
           <div class="programme__date">
             <span class="programme__date-span">Day 2</span>
-            <span class="programme__date-chooser">05/29/2015</span>
+            <span class="programme__date-chooser">07/21/2018</span>
           </div>
           <ul class="programme__list">
             <li class="programme__item programme__item--empty">
@@ -272,11 +272,11 @@
       <h2 class="contact__title">Contact</h2>
     </header>
     <div class="contact__body">
-      <form class="contact__form" action="http://echo.htmlacademy.ru">
-        <input class="contact__input" placeholder="Your Name"/>
-        <input class="contact__input" placeholder="Your Email"/>
-        <input class="contact__input" placeholder="Subject"/>
-        <textarea class="contact__textarea" rows="5" placeholder="Type your message here..."></textarea>
+      <form class="contact__form" action="http://echo.htmlacademy.ru" method="post">
+        <input class="contact__input" name="name" placeholder="Your Name" required/>
+        <input class="contact__input" name="email" placeholder="Your Email" required/>
+        <input class="contact__input" name="subject" placeholder="Subject"/>
+        <textarea class="contact__textarea" name="message" rows="5" placeholder="Type your message here..." required></textarea>
         <input class="button contact__submit" type="submit" value="Send message"/>
       </form>
       <div class="contact__info">
