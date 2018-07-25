@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YokNGalam</title>
+
+  <!-- <script src="js/picturefill.min.js"></script> -->
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <a class="header__brand" href="/">
+        Yok<b>Ngalam</b>
+      </a>
+      <ul class="header__nav-list header__nav-list--nojs">
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#about">About</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#features">Destination</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#order">Itinerary</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="header__menu-toggle"></div>
+    </nav>
+
+    <div class="header__jumbo">
+      <h1 class="header__title">Lets get <span class="dark-turquoise">lost</span></h1>
+      <p class="header__text">
+        Malang will never dissapoint you.<br>
+        From every step you took you will be amazed and suddenly fallin love with Malang.
+      </p>
+      <a class="button header__button" href="#makeOrder">Set itinerary now</a>
+    </div>
+
+    <div class="header__background header__background--first">
+    </div>
+
+    <div class="header__background header__background--second">
+    </div>
+
+    <div class="header__background header__background--third">
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="about__wrapper">
+      <div class="about__img-wrapper">
+        <img class="about__img" src="img/ic-house.png">
+      </div>
+      <div class="about__desc">
+        <h2 class="about__title">City of <span class="dark-turquoise">Love</span></h2>
+        <p class="about__text">
+          Malang is the second largest city in East Java province, Indonesia. It has a history
+          dating back to the ancient Mataram Kingdom. The city is famous for its cool
+          temperture. People in East Java sometimes call it "Paris of East Java".
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="features__wrapper">
+      <header class="features__header">
+        <h2 class="features__title">Des<span class="dark-turquoise">tination</span></h2>
+        <!-- <div class="features__info">
+          <span class="features__info-icon"></span>
+          <a class="features__info-link">see basic regulation</a>
+        </div> -->
+
+      </header>
+      <p class="features__text">
+        Being around by many mountain, Malang not only came with mountain vacation,
+        but out beach, cultural spot, and Human Interest is worth to experienced.
+      </p>
+      <div class="features__search">
+        <div class="features__search-field">
+          <input class="features__search-input" id="search" type="search" placeholder="search destination">
+        </div>
+        <div class="features__filter">
+          <a class="features__filter-link features__filter-link--active">All place </a>/
+          <a class="features__filter-link">Recommended place</a>
+        </div>
+      </div>
+    </div>
+    <div class="features__gallery">
+      <ul class="features__list">
+        <li class="features__item">
+          <div class="features__img-wrapper">
+            <img class="features__img" src="img/img-batu.jpg">
+          </div>
+
+          <div class="features__desc">
+            <div class="features__desc-icon-wrapper">
+              <img class="features__desc-icon" src="img/ic-city.png" width="57" height="59">
+            </div>
+            <h3 class="features__desc-title">Batu</h3>
+            <p class="features__desc-text">
+              is a city located in East Java Province of Indonesia. It is situated
+              about 20 km to the northwest of Malang. Formerly, it was a part of Malang
+              Regency; but in 2001, Batu became an independent city.
+              A population of 190,000 people, it lies on the southern slopes of Gunung
+              Welirang. Its population largely consists of Javanese.
+            </p>
+          </div>
+
+
+        </li>
+        <li class="features__item">
+          <div class="features__img-wrapper">
+            <img class="features__img" src="img/img-bromo.jpg">
+          </div>
+          <div class="features__desc">
+            <div class="features__desc-icon-wrapper">
+              <img class="features__desc-icon" src="img/ic-mountain.png" width="54" height="26">
+            </div>
+            <h3 class="features__desc-title">Bromo</h3>
+            <p class="features__desc-text">
+              Mount Bromo is an active volcano and part of the Tengger massive
+              in East Java, Indonesia. At 2,329 metres (7,641 ft) it is not only
+              the highest peak of the massive, but the most well-known.
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__img-wrapper">
+            <img class="features__img-icon" src="img/ic-biru.png">
+            <img class="features__img" src="img/img-biru.jpg">
+          </div>
+        </li>
+      </ul>
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item"></li>
+          <li class="pagination__item">1</li>
+          <li class="pagination__item">2</li>
+          <li class="pagination__item">3</li>
+          <li class="pagination__item">4</li>
+          <li class="pagination__item">5</li>
+          <li class="pagination__item"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <header class="order__header">
+      <h2 class="order__title">Set <span class="dark-turquoise">Itinerary</span></h2>
+      <p class="order__text">
+        Simply drag and drop what you want to visit, and voila we make a itinerary and schedule for your vacation.
+        Have a great trip!
+      </p>
+    </header>
+    <div class="order__wrapper" id="makeOrder">
+      <section class="programme">
+        <header class="programme__header">
+          <h3 class="programme__title">Your itinerary title here</h3>
+        </header>
+        <div class="programme__wrapper">
+          <div class="programme__date">
+            <span class="programme__date-span">Day 1</span>
+            <span class="programme__date-chooser">07/20/2018</span>
+          </div>
+          <ul class="programme__list">
+            <!-- <li class="programme__item">
+              <img class="programme__item-icon programme__item-icon--mountain" src="img/ic-mountain.png"/>
+              <h4 class="programme__item-title">Mt. Bromo</h4>
+              <span class="programme__item-time">03.30 - 09.00</span>
+            </li>
+            <li class="programme__item" data-placetype="city">
+              <img class="programme__item-icon programme__item-icon--city" src="img/ic-city.png"/>
+              <h4 class="programme__item-title">Batu City</h4>
+              <span class="programme__item-time">09.30 - 13.00</span>
+            </li> -->
+            <li class="programme__item programme__item--empty">
+              <span class="programme__item-empty-span">Drag destination here</span>
+            </li>
+          </ul>
+          <div class="programme__date">
+            <span class="programme__date-span">Day 2</span>
+            <span class="programme__date-chooser">07/21/2018</span>
+          </div>
+          <ul class="programme__list">
+            <li class="programme__item programme__item--empty">
+              <span class="programme__item-empty-span">Drag destination here</span>
+            </li>
+            <!-- <li class="programme__item">
+              <h4 class="programme__item-title">Mt. Bromo</h4>
+              <span class="programme__item-time">03.30 - 09.00</span>
+            </li>
+            <li class="programme__item">
+              <h4 class="programme__item-title">Mt. Bromo</h4>
+              <span class="programme__item-time">03.30 - 09.00</span>
+            </li> -->
+          </ul>
+        </div>
+        <div class="programme__buttons">
+          <button class="button programme__button">save as pdf</button>
+          <button class="button programme__button">print</button>
+        </div>
+      </section>
+      <section class="catalog">
+        <header class="catalog__header">
+          <h3 class="catalog__title">List of Destinations</h3>
+        </header>
+        <div class="catalog__wrapper">
+          <div class="catalog__filter">
+            <span class="catalog__filter-span">filter:</span>
+            <select class="catalog__filter-select" name="place">
+              <option value="none" selected="">
+                none
+              </option>
+              <option value="mountain">
+                Mountain
+              </option>
+              <option value="city">
+                City
+              </option>
+            </select>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item" data-placetype="mountain">
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Mt. Bromo</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">5 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon catalog__icon--mountain" src="img/ic-mountain.png" data-type="mountain">
+                <a class="catalog__details" href="#">view details</a>
+              </div>
+            </li>
+            <li class="catalog__item" data-placetype="city">
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Batu City</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">3 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon catalog__icon--city" src="img/ic-city.png" data-type="city">
+                <a class="catalog__details" href="#">view details</a>
+              </div>
+            </li>
+            <li class="catalog__item" data-placetype="city">
+              <div class="catalog__item-title-wrapper">
+                <h4 class="catalog__item-title">Biru City</h4>
+                <span class="catalog__time">estimated time: <span class="dark-turquoise">4 hours</span></span>
+              </div>
+              <div class="catalog__details-wrapper">
+                <img class="catalog__icon catalog__icon--city" src="img/ic-city.png" data-type="city">
+                <a class="catalog__details" href="#">view details</a>
+              </div>
+            </li>
+            <!-- <li class="catalog__item catalog__item--empty">
+              <span class="catalog__item-empty-span">Drag destination back</span>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <header class="contact__header">
+      <h2 class="contact__title">Contact</h2>
+    </header>
+    <div class="contact__body">
+      <form class="contact__form" action="http://echo.htmlacademy.ru" method="post">
+        <input class="contact__input" name="name" placeholder="Your Name" required="">
+        <input class="contact__input" name="email" placeholder="Your Email" required="">
+        <input class="contact__input" name="subject" placeholder="Subject">
+        <textarea class="contact__textarea" name="message" rows="5" placeholder="Type your message here..." required=""></textarea>
+        <input class="button contact__submit" type="submit" value="Send message">
+      </form>
+      <div class="contact__info">
+        <h3 class="contact__info-title">You can find us here</h3>
+        <span class="contact__info-span">JL.Danau Bratan sekian nomer sekian, Sawojajar Malang</span>
+        <span class="contact__info-span">(+62) 8816723812</span>
+        <span class="contact__info-span">(+62) 8816721612</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="subscribe__text-wrapper">
+      <h2 class="subscribe__title">Keep in touch</h2>
+      <p class="subscribe__text">
+        We will give you latest information about Malang
+      </p>
+    </div>
+    <div class="subscribe__input-wrapper">
+      <input class="subscribe__input" type="email" placeholder="Type Email Here For Subscribe">
+      <span class="subscribe__submit"></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__link">Terms & conditions</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link">Privacy Policy</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link">About us</a>
+      </li>
+    </ul>
+    <ul class="social__list">
+      <li class="social__item">
+        <a class="social__link" href="#"><span class="social__icon social__icon--fb"></span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#"><span class="social__icon social__icon--tw"></span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#"><span class="social__icon social__icon--ig"></span></a>
+      </li>
+    </ul>
+    <div class="footer__copyright">
+      <span class="footer__copyright-text">©YokNMalang, 2018</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/drag-n-drop.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
